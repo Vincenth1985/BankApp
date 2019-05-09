@@ -1,6 +1,7 @@
 package be.intecbrussel.view;
 
 import be.intecbrussel.model.CheckingAccount;
+import be.intecbrussel.model.SavingAccount;
 import be.intecbrussel.model.User;
 
 import java.util.Scanner;
@@ -9,12 +10,11 @@ public class BankApp {
 
     public static void main(String[] args) {
 
-        User user1 = new User(232, "Vincent", "Rue de la semence 39", "0241034323", "Vincenth1985@gmail.com", new CheckingAccount());
+        User user1 = new User(232, "Vincent", "Rue de la semence 39,1080 Bxl", "0241034323", "Vincenth1985@gmail.com",
+                new CheckingAccount(232,0.0,1000));
 
         System.out.println("\nHi welcome to Intec Brussel National Bank.");
         System.out.println("-".repeat(42));
-
-
         Scanner kbd = new Scanner(System.in);
 
         while (true) {
@@ -70,6 +70,8 @@ public class BankApp {
 
 
             } else if (x == 6) {
+
+                System.out.println("Thanks Good Bye");
                 break;
             }
         }

@@ -7,11 +7,10 @@ public class CheckingAccount extends Account {
     public CheckingAccount() {
     }
 
-    public CheckingAccount(int id, double balance) {
-
+    public CheckingAccount(int id, double balance, double overdraftLimit) {
         super(id, balance);
+        this.overdraftLimit = overdraftLimit;
     }
-
 
     public void setOverdraftLimit(double overdraftLimit) {
         this.overdraftLimit = overdraftLimit;
