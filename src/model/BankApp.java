@@ -35,22 +35,33 @@ public class BankApp {
 
             } else if (x == 3) {
 
+                do {
+                    System.out.println("Withdraw amount : ");
+                    userInput = kbd.nextLine();
 
-                System.out.println("Withdraw amount ");
+                } while (!userInput.matches("([0-9]*)\\.([0-9]*)"));
+                user1.deposit(Double.parseDouble(userInput));
 
-                user1.withDraw(kbd.nextDouble());
             } else if (x == 4) {
-                System.out.println("Please introduce the annual rate : ");
-                user1.setChangeAnnuelRate(kbd.nextDouble());
+                do {
+                    System.out.println("Please introduce the annual rate : ");
+                    userInput = kbd.nextLine();
+                }
+                while (!userInput.matches("([0-9]*)\\.([0-9]*)"));
+                user1.deposit(Double.parseDouble(userInput));
+
 
             } else if (x == 5) {
-
-                System.out.println(user1.account);
+                do {
+                    System.out.println(user1.account);
+                    userInput = kbd.nextLine();
+                }
+                while (!userInput.matches("([0-9]*)\\.([0-9]*)"));
+                user1.deposit(Double.parseDouble(userInput));
             } else if (x == 6) {
                 a = false;
+
             }
-
-
         }
     }
 }

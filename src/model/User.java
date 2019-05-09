@@ -34,8 +34,8 @@ public class User {
 
 
     public void withDraw(double withDraw) {
-
-        account.deposit(withDraw);
+        account = new CheckingAccount();
+        account.withdraw(withDraw);
 
 
     }

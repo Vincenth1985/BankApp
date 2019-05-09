@@ -24,6 +24,7 @@ public abstract class Account implements BankAccountSpecification {
         this.id = id;
     }
 
+
     public void setBalance(double balance) {
         this.balance = balance;
     }
