@@ -51,18 +51,19 @@ public abstract class Account implements BankAccountSpecification {
 
     @Override
     public double getMonthlyInterestRate() {
-        return 0;
+        return this.annualInterestRate / 12;
     }
 
     @Override
     public double getMonthlyIntereset() {
-        return 0;
+        return this.balance * getMonthlyInterestRate();
     }
 
     public abstract void withdraw(double d);
 
     @Override
-    public void deposit(double d) {
+    public void deposit(double deposit) {
+        this.balance += deposit;
 
     }
 
