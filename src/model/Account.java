@@ -5,32 +5,27 @@ import java.time.LocalDate;
 
 public abstract class Account implements BankAccountSpecification {
 
-    private double annualInterestRate;
+
     private int id;
     private double balance;
-    private LocalDate dateCreated = LocalDate.now();
+    private double annualInterestRate;
+    private LocalDate dateCreated;
 
 
     public Account() {
     }
 
-    public Account(int id, double annualInterestRate) {
-
-        this.annualInterestRate = annualInterestRate;
-
+    public Account(int id, double balance) {
+        this.id = id;
+        this.balance = balance;
     }
 
-
-    @Override
-    public abstract void withdraw(double d);
-
-
-    @Override
-    public void deposit(double d) {
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public double getAnnualInterestRate() {
-        return annualInterestRate;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public void setAnnualInterestRate(double annualInterestRate) {
@@ -41,25 +36,43 @@ public abstract class Account implements BankAccountSpecification {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public double getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+
+    public LocalDate getDateCreated() {
+        return dateCreated;
     }
 
 
-    public double getMounthlyInterestRate() {
-        return BankAccountSpecification.MOUNTHLY_INTERESET_RATE;
+    @Override
+    public double getMonthlyInterestRate() {
+        return 0;
     }
 
+    @Override
+    public double getMonthlyIntereset() {
+        return 0;
+    }
 
-    public double getMounthlyInterest() {
-        return BankAccountSpecification.MOUNTHLY_INTERESET;
+    public abstract void withdraw(double d);
+
+    @Override
+    public void deposit(double d) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", balance=" + balance +
+                ", annualInterestRate=" + annualInterestRate +
+                ", dateCreated=" + dateCreated +
+                '}';
     }
 }
