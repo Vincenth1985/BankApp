@@ -29,6 +29,54 @@ public class User {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public String getPhoneNr() {
+        return phoneNr;
+    }
+
+    public void setPhoneNr(String phoneNr) {
+        this.phoneNr = phoneNr;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
     public void checkBalance() {
         System.out.printf("%nBalance : %.2f EUR%n", account.getBalance());
     }
@@ -51,18 +99,10 @@ public class User {
 
     }
 
-    public Account getAccount() {
-        return account;
-    }
 
     @Override
     public String toString() {
-        return account.toString() + "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", adress='" + adress + '\'' +
-                ", phoneNr='" + phoneNr + '\'' +
-                ", eMail='" + eMail + '\'' + '}';
+        return String.format("Name:%s Adress:%s Phone Number:%s E-mail:%s", name, adress, phoneNr, eMail);
     }
 
 

@@ -2,6 +2,7 @@ package be.intecbrussel.services;
 
 public interface BankAccountSpecification {
 
+
     double getMonthlyInterestRate();
 
     double getMonthlyIntereset();

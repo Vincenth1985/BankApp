@@ -10,8 +10,8 @@ public class BankApp {
 
     public static void main(String[] args) {
 
-        User user1 = new User(232, "Vincent", "Rue de la semence 39,1080 Bxl", "0241034323", "Vincenth1985@gmail.com",
-                new CheckingAccount(232,0.0,1000));
+        User user1 = new User(232, "Vincent Honca", "Rue de la Semence 39.", "02/410.34.32", "Vincenth1985@gmail.com",
+                new CheckingAccount(232, 0.0, 1000));
 
         System.out.println("\nHi welcome to Intec Brussel National Bank.");
         System.out.println("-".repeat(42));
@@ -23,8 +23,8 @@ public class BankApp {
             do {
                 System.out.println("\nChoose between options below.");
                 System.out.println("-".repeat(30));
-                System.out.println("1.CheckBalance.");
-                System.out.println("2.Introduce deposit amount.");
+                System.out.println("1.Check Balance.");
+                System.out.println("2.Deposit amount.");
                 System.out.println("3.Withdraw amount.");
                 System.out.println("4.Please introduce the annual rate.");
                 System.out.println("5.Printing Account.");
@@ -67,6 +67,7 @@ public class BankApp {
             } else if (x == 5) {
 
                 System.out.println(user1.getAccount());
+                System.out.println(user1.toString());
 
 
             } else if (x == 6) {
