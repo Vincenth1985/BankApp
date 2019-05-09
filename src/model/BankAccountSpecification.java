@@ -3,9 +3,9 @@ package model;
 public interface BankAccountSpecification {
 
 
-    public abstract void withdraw();
+    public void withdraw(double d);
 
-    public abstract void deposit();
+    public void deposit(double d);
 
 
     final double MOUNTHLY_INTERESET_RATE = 0;
