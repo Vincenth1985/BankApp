@@ -2,16 +2,14 @@ package model;
 
 public interface BankAccountSpecification {
 
-    public double getMonthlyInterestRate();
+    double getMonthlyInterestRate();
 
-    public double getMonthlyIntereset();
-
-
-    public void withdraw(double d);
-
-    public void deposit(double d);
+    double getMonthlyIntereset();
 
 
+    void withdraw(double d);
+
+    void deposit(double d);
 
 
 }
