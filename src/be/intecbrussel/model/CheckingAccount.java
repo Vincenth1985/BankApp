@@ -1,4 +1,4 @@
-package model;
+package be.intecbrussel.model;
 
 public class CheckingAccount extends Account {
 
@@ -8,6 +8,7 @@ public class CheckingAccount extends Account {
     }
 
     public CheckingAccount(int id, double balance) {
+
         super(id, balance);
     }
 

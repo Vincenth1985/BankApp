@@ -1,4 +1,6 @@
-package model;
+package be.intecbrussel.model;
+
+import be.intecbrussel.services.BankAccountSpecification;
 
 import java.time.LocalDate;
 
@@ -9,7 +11,7 @@ public abstract class Account implements BankAccountSpecification {
     private int id;
     private double balance;
     private double annualInterestRate;
-    private LocalDate dateCreated;
+    private LocalDate dateCreated = LocalDate.now();
 
 
     public Account() {
@@ -46,9 +48,9 @@ public abstract class Account implements BankAccountSpecification {
     }
 
     public LocalDate getDateCreated() {
+
         return dateCreated;
     }
-
 
     @Override
     public double getMonthlyInterestRate() {

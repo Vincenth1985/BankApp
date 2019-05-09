@@ -1,4 +1,7 @@
-package model;
+package be.intecbrussel.view;
+
+import be.intecbrussel.model.CheckingAccount;
+import be.intecbrussel.model.User;
 
 import java.util.Scanner;
 
@@ -63,12 +66,15 @@ public class BankApp {
 
             } else if (x == 5) {
 
-                System.out.println(user1.account);
+                System.out.println(user1.getAccount());
 
 
             } else if (x == 6) {
                 break;
             }
         }
+        kbd.close();
     }
+
+
 }

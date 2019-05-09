@@ -1,5 +1,8 @@
-package model;
+package be.intecbrussel.model;
 
+/**
+ *
+ */
 public class User {
 
 
@@ -9,7 +12,7 @@ public class User {
     private String phoneNr;
     private String eMail;
 
-    Account account;
+    private Account account;
 
     public User() {
     }
@@ -46,6 +49,10 @@ public class User {
 
         account.setAnnualInterestRate(annuelRate);
 
+    }
+
+    public Account getAccount() {
+        return account;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package model;
+package be.intecbrussel.services;
 
 public interface BankAccountSpecification {
 
