@@ -22,11 +22,10 @@ public class CheckingAccount extends Account {
 
     @Override
     public void withdraw(double withdrawAmount) {
-        if (withdrawAmount > getBalance()+overdraftLimit) {
-            System.out.println("More than balance ");
+        if (withdrawAmount > getBalance() + overdraftLimit) {
+            System.err.println("Not possible.Your balance is :" + getBalance());
         } else {
             setBalance(getBalance() - withdrawAmount);
-            System.out.println("Thanks good bye.");
         }
 
 
@@ -38,8 +37,6 @@ public class CheckingAccount extends Account {
                 "overdraftLimit=" + overdraftLimit +
                 '}';
     }
-
-
 
 
 }

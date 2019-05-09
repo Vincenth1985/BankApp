@@ -15,16 +15,19 @@ public class User {
     }
 
     public User(int id, String name, String adress, String phoneNr, String eMail, Account account) {
+        account.setId(id);
         this.id = id;
         this.name = name;
         this.adress = adress;
         this.phoneNr = phoneNr;
         this.eMail = eMail;
         this.account = account;
+
+
     }
 
     public void checkBalance() {
-        System.out.println(account.getBalance());
+        System.out.printf("%nBalance : %.2f EUR%n", account.getBalance());
     }
 
     public void deposit(double deposit) {
@@ -34,7 +37,6 @@ public class User {
 
 
     public void withDraw(double withDraw) {
-        account = new CheckingAccount();
         account.withdraw(withDraw);
 
 
