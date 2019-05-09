@@ -33,9 +33,7 @@ public class CheckingAccount extends Account {
 
     @Override
     public String toString() {
-        return super.toString() + "CheckingAccount{" +
-                "overdraftLimit=" + overdraftLimit +
-                '}';
+        return super.toString() + String.format(getClass().getSimpleName() + " Overdraftlimit : %.2f Euro", overdraftLimit);
     }
 
 

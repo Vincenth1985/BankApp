@@ -2,8 +2,8 @@ package be.intecbrussel.model;
 
 import be.intecbrussel.services.BankAccountSpecification;
 
-import java.time.LocalDate;
 
+import java.time.LocalDate;
 
 public abstract class Account implements BankAccountSpecification {
 
@@ -72,11 +72,8 @@ public abstract class Account implements BankAccountSpecification {
 
     @Override
     public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", balance=" + balance +
-                ", annualInterestRate=" + annualInterestRate +
-                ", dateCreated=" + dateCreated +
-                '}';
+        return String.format("Bank account Id :%d Balance %.2f Euro Annual Interest %.2f Date:%2td-%2tm-%2tY ", id, balance, annualInterestRate, dateCreated, dateCreated, dateCreated);
+
+
     }
 }
